@@ -29,8 +29,7 @@ public class Washer extends Appliance {
 			this.wash = false;
 		} else {
 			System.out.println("Стиральная машина не стирает");
-		}
-	 
+		} 
 	}
 	
 	public void switchOn(){

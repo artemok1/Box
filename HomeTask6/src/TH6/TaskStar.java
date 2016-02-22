@@ -1,7 +1,5 @@
 package TH6;
 
-import java.util.Arrays;
-import java.util.regex.*; 
 import java.util.Scanner;
 
 /*  Имеется строка с текстом. Подсчитать количество слов в тексте. Желательно учесть, 

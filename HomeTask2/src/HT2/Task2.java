@@ -1,8 +1,6 @@
 package HT2;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 /*
  *  —оздайте массив с 10-ю переменными типа float. ƒалее найдите дубликаты и выведите их количество. 
