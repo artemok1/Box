@@ -10,6 +10,9 @@ package TH12;
  */
 
 public class Task1and2 {
+	
+	// read tooltips!
+	
 	public static void main(String[] args) {
 		// run application
 		Application frame = new Application();

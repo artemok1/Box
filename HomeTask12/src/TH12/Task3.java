@@ -8,6 +8,8 @@ package TH12;
  */
 
 public class Task3 {
+	
+	// read tooltips!
 
 	public static void main(String[] args) {
 		Application2 frame = new Application2();

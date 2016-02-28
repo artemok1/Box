@@ -126,18 +126,18 @@ public class Application2 extends JFrame {
 		btnNewButton.setBounds(10, 86, 89, 23);
 		panel.add(btnNewButton);
 
-		JButton btnNewButton_1 = new JButton("Man");
+		JButton btnNewButton_1 = new JButton("Random Man");
 		btnNewButton_1.addActionListener(Listener);
 		btnNewButton_1.setToolTipText("Show random man");
 		btnNewButton_1.setActionCommand("MAN");
-		btnNewButton_1.setBounds(443, 86, 89, 23);
+		btnNewButton_1.setBounds(443, 86, 160, 23);
 		panel.add(btnNewButton_1);
 
-		JButton btnNewButton_2 = new JButton("Women");
+		JButton btnNewButton_2 = new JButton("Random Women");
 		btnNewButton_2.addActionListener(Listener);
 		btnNewButton_2.setActionCommand("WOMEN");
 		btnNewButton_2.setToolTipText("Show random women");
-		btnNewButton_2.setBounds(542, 86, 89, 23);
+		btnNewButton_2.setBounds(620, 86, 160, 23);
 		panel.add(btnNewButton_2);
 
 		JSplitPane splitPane = new JSplitPane();

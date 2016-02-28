@@ -75,7 +75,7 @@ public class ManAndWomenActionsListener implements ActionListener {
 		case "MAN": // show random man
 			if (this.parent.dataSet.get(Application2.MAN).size() == 0) {
 				JOptionPane.showMessageDialog(null,
-						"Add at leat one man to the array", "Failed",
+						"Add at least one man to the array", "Failed",
 						JOptionPane.INFORMATION_MESSAGE);
 				return;
 			}
@@ -93,14 +93,14 @@ public class ManAndWomenActionsListener implements ActionListener {
 		case "WOMEN": // show random women
 			if (this.parent.dataSet.get(Application2.WOMAN).size() == 0) {
 				JOptionPane.showMessageDialog(null,
-						"Add at leat one woman to the array", "Failed",
+						"Add at least one woman to the array", "Failed",
 						JOptionPane.INFORMATION_MESSAGE);
 				return;
 			}
 
 			// get random index
 			int idxW = new Random().nextInt(this.parent.dataSet.get(
-					Application2.MAN).size());
+					Application2.WOMAN).size());
 
 			Person woman = this.parent.dataSet.get(Application2.WOMAN).get(idxW);
 
