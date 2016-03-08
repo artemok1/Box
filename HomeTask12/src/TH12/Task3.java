@@ -9,11 +9,10 @@ package TH12;
 
 public class Task3 {
 	
-	// read tooltips!
+	// read tool tips!
 
 	public static void main(String[] args) {
 		Application2 frame = new Application2();
 		frame.setVisible(true);
 	}
-
 }
