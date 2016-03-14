@@ -30,13 +30,11 @@ public class Task1 {
 
 		// get array of words
 		String[] array = text.split(" +");
-		
+
 		Arrays.sort(array, new StringComporator());
-		
+
 		for (int i = 0; i < array.length; i++) {
 			System.out.println(array[i]);
-		}	
-
+		}
 	}
-
 }
