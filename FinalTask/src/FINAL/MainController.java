@@ -13,8 +13,6 @@ public class MainController implements ActionListener {
 	public static final String JSONLINK = "http://kiparo.ru/t/stock.json";
 	public static final String XMLLINK = "http://kiparo.ru/t/stock.xml";
 
-	private static MainController controller = new MainController();
-
 	private MainWindow mainWindow;
 	private Parser parser;
 	private DataModel dataModel;
@@ -26,7 +24,7 @@ public class MainController implements ActionListener {
 	}
 
 	public static MainController getInstance() {
-		return controller;
+		return Singalton.controller;
 	}
 
 	public void run() {
@@ -114,4 +112,10 @@ public class MainController implements ActionListener {
 			}
 		}
 	}
+
+	// local class
+	private static class Singalton {
+		private final static MainController controller = new MainController();
+	}
+
 }

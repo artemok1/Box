@@ -9,6 +9,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -34,8 +36,6 @@ public class Parser extends Thread {
 	public void run() {
 		this.prepareData(this.type);
 	}
-	
-	
 
 	public String getMessage() {
 		return message;
@@ -56,14 +56,34 @@ public class Parser extends Thread {
 	private void prepareData(String command) {
 		File file = null;
 
-		if (command.equals(MainWindow.JSON)
-				|| command.equals(MainWindow.GSON)) {
+		if (command.equals(MainWindow.JSON) || command.equals(MainWindow.GSON)) {
 			file = this.getFile(MainController.JSONLINK);
 		} else if (command.equals(MainWindow.XML)) {
 			file = this.getFile(MainController.XMLLINK);
 		}
 
 		if (file == null) {
+			return;
+		}
+
+		// check file format
+		String[] rtext = file.getName().split("\\.");
+
+		if (rtext.length != 2) {
+			this.message = "File format is not allowed";
+
+			return;
+		}
+
+		String text = rtext[rtext.length - 1];
+
+		Pattern pattern = Pattern.compile("(xml|json)$");
+
+		Matcher matcher = pattern.matcher(text);
+
+		if (matcher.find() == false) {
+			this.message = "File format is not allowed";
+
 			return;
 		}
 
